@@ -66,7 +66,7 @@ struct ContentView: View {
                 action: {
                 reset(quantitaPizza: &quantitaPizza, selezionaPizza: &selezionaPizza, quantitaBibita: &quantitaBibita, selezionaBibita: &selezionaBibita, couponCode: &couponCode)
             }){
-                Text("Resetta")
+                Text("Annulla")
             })
 //            componente per la dark mode
              .navigationBarItems(trailing: Button(
@@ -210,7 +210,7 @@ func prezzo(prez: Float, isSend: Binding<Bool>) -> some View {
             Spacer()
             Button(action: {
                 if prez > 0{
-                    isSend.wrappedValue.toggle()
+                    isSend.wrappedValue = true
                 }
             }) {
                 Text("Ordina")
