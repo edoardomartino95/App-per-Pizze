@@ -128,15 +128,6 @@ struct ContentView: View {
             .clipShape(Circle())
             .foregroundColor(.black)
     }
-        
-//  getter per i prezzi di pizza e bibita
-    var mygetterpizza: Float{
-        getpizzaid(selezionaPizza: self.selezionaPizza, prez: prezziPizze)
-    }
-    var mygetterbibita: Float{
-        getbibitaid(selezionaBibita: self.selezionaBibita, prez: prezziBibite)
-    }
-    
 }
 
 // selettore pizza
@@ -152,14 +143,7 @@ func pizza(selezionaPizza: Binding<Int>, arr: [String], prez: [Float]) -> some V
    }
 
 }
-// prendo l'id della pizza
-func getpizzaid(selezionaPizza: Int, prez:[Float]) -> Float {
-    if selezionaPizza >= 0 && selezionaPizza < prez.count{
-        return prez[selezionaPizza]
-    }else{
-        return 0.0
-    }
-}
+
 // selettore bibita
 func bibita(selezionaBibita: Binding<Int>, arr: [String], prez: [Float]) -> some View{
     Section{
@@ -172,14 +156,7 @@ func bibita(selezionaBibita: Binding<Int>, arr: [String], prez: [Float]) -> some
         Text("Tipo di bibita")
     }
 }
-// prendo l'id delle bibite
-func getbibitaid(selezionaBibita: Int, prez:[Float]) -> Float {
-    if selezionaBibita >= 0 && selezionaBibita < prez.count{
-        return prez[selezionaBibita]
-    }else{
-        return 0.0
-    }
-}
+
 //stepper bibite
 func stepdue(bibitaQuantity: Binding<Int>) -> some View{
     Section{
