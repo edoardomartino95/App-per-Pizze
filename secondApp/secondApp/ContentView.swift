@@ -213,8 +213,8 @@ func prezzo(prez: Float, isSend: Binding<Bool>) -> some View {
                     isSend.wrappedValue.toggle()
                 }
             }) {
-                Text("Invia")
-                    .padding(.horizontal, 10)
+                Text("Ordina")
+                    .padding(.horizontal, 4)
                     .padding(.vertical, 5)
                     .background(Color.blue)
                     .foregroundColor(.white)
